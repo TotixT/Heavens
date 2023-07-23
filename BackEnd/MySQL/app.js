@@ -6,7 +6,7 @@ import departamentoRouter from './routes/departamento.routes.js';
 import municipioRouter from './routes/municipio.routes.js'
 import comunaRouter from './routes/comuna.routes.js';
 import barrioRoutes from './routes/barrio.routes.js';
-// import creyenteRoutes from './routes/creyente.routes.js';
+import creyenteRoutes from './routes/creyente.routes.js';
 
 dotenv.config();
 const app = express();
@@ -23,7 +23,7 @@ app.use("/api/departamento",departamentoRouter);
 app.use("/api/municipio",municipioRouter);
 app.use("/api/comuna",comunaRouter);
 app.use("/api/barrio",barrioRoutes);
-// app.use("/api/creyente",creyenteRoutes);
+app.use("/api/creyente",creyenteRoutes);
 
 function listening(app){
   app.listen(port, ()=>{
